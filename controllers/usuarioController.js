@@ -10,7 +10,7 @@ exports.crearUsuario = async(req, res) =>{
         //revisar que sea un unico usuario registrado
         let usuario = await Usuario.findOne({email});
         if (usuario){
-            return res.status(404).json({msg:"El usuario ya existe"});
+            return res.status(404).json({msg:"El usuario ya existe"})
         }
         
         //crear nuevo usuario

@@ -3,6 +3,7 @@ const conectarDB = require("./config/db");
 const usuarioRoutes = require("./routes/usuarioRoutes")
 const categoriasRoutes = require("./routes/categoriasRoutes")
 const productosRoutes = require("./routes/productosRoutes")
+const contactenosRoutes = require("./routes/contactenosRoutes")
 const auth = require("./routes/auth")
 const cors = require("cors");
 
@@ -24,6 +25,7 @@ app.use("/api/usuarios", usuarioRoutes);
 app.use("/api/auth", auth);
 app.use("/api/productos", productosRoutes);
 app.use("/api/categorias", categoriasRoutes);
+app.use("/api/contactenos", contactenosRoutes);
 
 app.listen(5000, ()=>{
     console.log("Levantamos servidor en Puerto 5000, conectando con el Front");
